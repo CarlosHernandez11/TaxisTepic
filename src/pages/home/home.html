@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Taxis Tepic Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+      <button (click)="doTaxiLogin()"><ion-icon ios="ios-car" md="md-car"></ion-icon> Ingresar como Taxista</button>
+  
+  <ion-list floating>
+    <ion-item>
+       <ion-icon ios="ios-person" md="md-person" item-left></ion-icon>
+       <ion-input type="text" value="" placeholder="Nombre de Usuario" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+       <ion-icon ios="ios-unlock" md="md-unlock" item-left></ion-icon>
+       <ion-input type="password" value="" placeholder="contraseña" [(ngModel)]="password"></ion-input> 
+    </ion-item>
+    <ion-item> 
+      <button (click)="login()" ion-button block style="background-color: orangered"><ion-icon ios="ios-log-in" md="md-log-in"></ion-icon> Login</button>     
+    </ion-item>
+    <ion-item inline> 
+      <button (click)="doFbLogin()" ion-button  style="width: 50%"><ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon> Ingreso </button>
+      <button (click)="doGoogleLogin()" ion-button  style="width: 50%; background-color:red"><ion-icon ios="logo-googleplus" md="logo-googleplus"></ion-icon> Ingreso </button> 
+    </ion-item>
+  </ion-list>
+</ion-content>
